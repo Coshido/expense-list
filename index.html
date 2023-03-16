@@ -1,13 +1,52 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>TypeScript Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div class="wrapper">
+      <h1>Expenses List</h1>
+      <ul class="item-list"></ul>
+    </div>
+
+    <div class="form-wrapper">
+      <form class="new-item-form">
+        <div class="field">
+          <label>Type:</label>
+          <select id="type">
+            <option value="work">Work</option>
+            <option value="provate">Private</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>To / From:</label>
+          <input type="text" id="tofrom" />
+        </div>
+        <div class="field">
+          <label>Details:</label>
+          <input type="text" id="details" />
+        </div>
+        <div class="field">
+          <label>Amount (£):</label>
+          <input type="number" id="amount" />
+        </div>
+        <button>Add</button>
+      </form>
+    </div>
+    <div id="footer">
+      <a
+        id="footer-link"
+        href="https://github.com/Coshido?tab=repositories"
+        target="_blank"
+        >Copyrights 2022 © <i class="fab fa-github"></i
+      ></a>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/2e94fa5060.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="sandbox.js"></script>
   </body>
 </html>
