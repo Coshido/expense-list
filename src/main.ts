@@ -20,11 +20,14 @@ const list = new ListTemplate(ul);
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
+  let values: [string, string, number];
+  values = [tofrom.value, details.value, amount.valueAsNumber];
+
   let doc: HasFormatter;
   if (type.value === "Work") {
-    doc = new Work(tofrom.value, details.value, amount.valueAsNumber);
+    doc = new Work(...values);
   } else {
-    doc = new Private(tofrom.value, details.value, amount.valueAsNumber);
+    doc = new Private(...values);
   }
 
   list.render(doc, type.value, "end");
