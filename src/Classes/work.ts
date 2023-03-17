@@ -7,6 +7,6 @@ export class Work implements HasFormatter {
     public amount: number
   ) {}
   format() {
-    return `I went to ${this.subject} and I spent ${this.amount} for ${this.details}`;
+    return `I went to ${this.subject} and I spent ${this.amount} euro for ${this.details}`;
   }
 }
